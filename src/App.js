@@ -41,7 +41,13 @@ class App extends Component {
   }
 
   handleSubmit = (title) => {
-    console.log(title)
+    const newTodo = {
+      id: uuid.v4(),
+      title: title,
+      completed: false
+    }
+    this.setState({todos: [...this.state.todos,
+        newTodo]})
   }
 
   render() {
