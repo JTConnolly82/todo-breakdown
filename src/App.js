@@ -40,11 +40,15 @@ class App extends Component {
     });
   }
 
+  handleSubmit = (title) => {
+    console.log(title)
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Todos</h1>
-        <AddTodo />
+        <AddTodo handleSubmit={this.handleSubmit}/>
         <Todos todos={this.state.todos} 
         handleChange={this.handleChange} 
         handleClick={this.handleClick}/>
