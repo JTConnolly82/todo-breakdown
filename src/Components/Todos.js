@@ -6,13 +6,13 @@ class Todos extends Component {
 
   handleChange = (e) => {
     e.preventDefault();
-    
+
   }
 
 
   render() {
     return this.props.todos.map((todo) => (
-      <TodoItem key={todo.id} todo={todo} />
+      <TodoItem key={todo.id} todo={todo} handleChange={this.props.handleChange} />
     ));
   }
 }
