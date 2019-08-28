@@ -32,12 +32,17 @@ class App extends Component {
    
   }
 
+  handleClick = () => {
+    console.log('loggin')
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Todos</h1>
         <Todos todos={this.state.todos} 
-        handleChange={this.handleChange} />
+        handleChange={this.handleChange} 
+        handleClick={this.handleClick}/>
       </div>
     );
   }
