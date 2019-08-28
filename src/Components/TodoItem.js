@@ -12,11 +12,17 @@ class TodoItem extends Component {
     }
   }
 
+  handleChange = (e) => {
+
+  }
+
 
   render() {
     return (
         <div style={this.getStyle()}>
           <h3>
+            <input type='checkbox' 
+                   onChange={this.props.handleChange} />{' '}
             {this.props.todo.title}
           </h3>
         </div>
