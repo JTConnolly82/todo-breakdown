@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Todos from './Components/Todos';
+import AddTodo from './Components/AddTodo';
 import uuid from 'uuid';
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Todos</h1>
+        <AddTodo />
         <Todos todos={this.state.todos} 
         handleChange={this.handleChange} 
         handleClick={this.handleClick}/>
