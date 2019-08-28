@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 
 class AddTodo extends Component {
+  state = {
+    title: '',
+  }
 
+  onChange = (e) => {
+    this.setState({title: e.target.value})
+  }
 
   render() {
     return (
@@ -11,6 +17,8 @@ class AddTodo extends Component {
         name='title' 
         placeholder='add todo'
         style={{flex: '10', padding: '5px'}}
+        value={this.state.title}
+        onChange={this.onChange}
         />
         <input 
         type='submit' 
