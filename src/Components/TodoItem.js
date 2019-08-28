@@ -12,9 +12,6 @@ class TodoItem extends Component {
     }
   }
 
-  handleChange = (e) => {
-
-  }
 
 
   render() {
@@ -22,7 +19,7 @@ class TodoItem extends Component {
         <div style={this.getStyle()}>
           <h3>
             <input type='checkbox' 
-                   onChange={this.props.handleChange} />{' '}
+                   onChange={this.props.handleChange.bind(this, this.props.todo.id)} />{' '}
             {this.props.todo.title}
           </h3>
         </div>

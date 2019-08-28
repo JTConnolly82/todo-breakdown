@@ -5,12 +5,6 @@ import uuid from 'uuid';
 
 class App extends Component {
 
-  handleChange = (e) => {
-    e.preventDefault();
-
-  }
-
-
   state = {
     todos: [
       {
@@ -25,11 +19,18 @@ class App extends Component {
       },
     ]
   }
+
+  handleChange = (e) => {
+    
+   
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Todos</h1>
-        <Todos todos={this.state.todos} handleChange={this.handleChange} />
+        <Todos todos={this.state.todos} 
+        handleChange={this.handleChange} />
       </div>
     );
   }
